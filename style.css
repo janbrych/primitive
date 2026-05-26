@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b3d0b; /* Dark jungle green fallback */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+#monkey {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+}
+
+.spinning {
+    animation: spin 0.2s linear infinite; /* Even faster! */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
