@@ -29,9 +29,9 @@ body {
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg) rotateX(0deg) rotateY(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg) rotateX(360deg) rotateY(360deg);
     }
 }
