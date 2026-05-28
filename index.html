@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning Monkey</title>
+    <title>The Spinning Monkey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <img src="https://pngimg.com/uploads/monkey/monkey_PNG18729.png" alt="Monkey" id="monkey" class="spinning">
+    <div class="overlay"></div>
+
+    <div id="monkey-container">
+        <img id="monkey" src="https://pngimg.com/uploads/monkey/monkey_PNG18729.png" alt="Spinning Monkey">
     </div>
+
+    <div id="info-panel" class="minimal-panel">
+        <h2>About Monkeys</h2>
+        <p>Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as simians. Traditionally, all animals in the group now known as simians are counted as monkeys except the apes. Monkeys are generally considered to be intelligent, especially the Old World monkeys. Many monkey species are tree-dwelling (arboreal), although there are species that live primarily on the ground, such as baboons.</p>
+    </div>
+
+    <div id="control-panel" class="minimal-panel">
+        <h2>Controls</h2>
+        <div class="control-group">
+            <label for="speed-slider">Spin Speed</label>
+            <div class="slider-container">
+                <span class="slider-label">Frozen</span>
+                <input type="range" id="speed-slider" min="0" max="10" step="0.5" value="5">
+                <span class="slider-label">Super Sonic</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <button id="music-toggle">Play Dramatic Music</button>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="https://archive.org/download/symphony-no.-5_202203/01%20Allegro%20con%20brio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="script.js"></script>
 </body>
 </html>
